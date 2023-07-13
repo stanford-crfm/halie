@@ -1,2 +1,4 @@
 assets/raw/*/logs/*
 assets/raw/*/runs/*
+data/raw/*/runs/*
+data/raw/*/logs/*

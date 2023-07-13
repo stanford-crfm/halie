@@ -9,8 +9,8 @@ from utils.survey_utils import save_survey_responses
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--path_raw', type=str, default='./assets/raw/crossword')
-    parser.add_argument('--path_std', type=str, default='./assets/std/crossword')
+    parser.add_argument('--path_raw', type=str, default='./data/raw/crossword')
+    parser.add_argument('--path_std', type=str, default='./data/std/crossword')
     parser.add_argument('--path_cache', type=str, default='./cache')
     parser.add_argument('--verbose', action='store_true')
     args = parser.parse_args()

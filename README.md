@@ -19,14 +19,17 @@ If you have any questions, please reach out to [Mina Lee](https://minalee.info/)
 ## Contents
 - [Data](#Data)
 - [Analysis](#Analysis)
+- [Interfaces](#Interfaces)
 
 ---
 
 ## Data
 
-**Standardized data.** If you simply want to take a look at our data or use it to perform your own analysis, you can find the standardized data for the five tasks in `./assets/std`. See [README](./assets/README.md) for the data format.
+See [README](./data/README.md) for a more comprehensieve overview of data in HALIE.
 
-**Raw data.** On the other hand, if you want to standardize data from raw data we collected (`./assets/raw`), you can follow the steps below to convert the raw data.
+**Standardized data.** If you simply want to take a look at our data or use it to perform your own analysis, you can find the standardized data for the five tasks in `./data/std`. 
+
+**Raw data.** On the other hand, if you want to standardize data from raw data we collected (`./data/raw`), you can follow the steps below to convert the raw data.
 
 First, install the required packages:
 ```
@@ -38,12 +41,18 @@ Then, run the following command to standardize the logs (e.g., for question answ
 python3 ./src/run_question.py
 ```
 
-The above command reads the raw data at `./assets/raw/question ` and saves the standardized data at `./assets/std/question`. For the other four tasks, replace `question` with the name of the task you want to standardize in the path as well as command.
+The above command reads the raw data at `./data/raw/question ` and saves the standardized data at `./data/std/question`. For the other four tasks, replace `question` with the name of the task you want to standardize in the path as well as command.
+
+**Visualizations.** Static and dynamic visualizations of our data, which allows for an easier way for looking at raw interaction traces, is included at `./data/visualizations`.
 
 **Your data.** If you are interested in extending HALIE to support a new task, please create a PR or contact [Mina Lee](https://minalee.info/) at `minalee@stanford.edu`.
 
----
 
 ## Analysis
 
 We provide Jupyter Notebook files for analyzing the data collected for HALIE. The files are stored in `./notebook`.
+
+## Interfaces
+
+Code for interfaces used  to collected interaction traces for tasks in HALIE is located in `./interfaces`. 
+

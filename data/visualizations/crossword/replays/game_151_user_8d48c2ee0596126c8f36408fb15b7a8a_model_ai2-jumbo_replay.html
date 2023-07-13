@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><iframe id='viz' srcdoc=''style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; visibility:hidden;'allowTransparency='true' background='transparent'>Your browser doesn't support iframes.</iframe></body></html><script>  function getText(url){   var request = new XMLHttpRequest();    request.open('GET', url, false);    request.send(null);    if(request.status === 200) {      return request.responseText    }    else {      console.log('Error')    }}
+var main_url = 'https://raw.githubusercontent.com/meghabyte/crosswords/main/replays/game_151_user_8d48c2ee0596126c8f36408fb15b7a8a_model_ai2-jumbo/game_151_user_8d48c2ee0596126c8f36408fb15b7a8a_model_ai2-jumbo__'
+let indices = ['5', '6', '7', '8', '9', '17', '18', '19', '20', '23', '24', '25', '26', '29', '30', '31', '32', '35', '36', '37', '38', '39', '43', '44', '45', '46', '50', '51', '52', '53', '55', '56', '57', '58', '60', '61', '62', '63', '64', '69', '70', '71', '72', '74', '75', '76', '79', '80', '81', '82', '84', '85', '86', '87', '89', '90', '91', '92', '94', '95', '96', '97', '102', '103', '104', '107', '108', '109', '110', '111', '114', '115', '116', '118', '119', '120', '121', '123', '124', '125', '128', '129', '130', '134', '135', '136', '138', '139', '142', '143', '148', '149', '152', '153', '157', '162', '163', '164', '165', '166', '169', '170', '173', '178', '179', '180', '181', '182', '183', '184', '187', '188', '189', '190', '191', '193', '194', '195', '197', '202', '203', '204', '205', '207', '208', '209', '212', '214', '216', '217', '218', '220', '221', '222', '229', '230', '231', '234', '237', '240', '244', '245', '246', '249', '252', '253', '254', '256', '257', '258', '259', '261', '262', '264', '267', '268', '272', '277', '279', '280', '281', '282', '285', '294', '299', '303', '304', '307', '309', '310', '311', '312', '313', '314', '315', '319', '321', '323', '324', '325', '327', '328', '330', '332', '333', '336', '343', '344', '345', '346', '347', '348', '349', '350', '351', '352', '353', '354', '355', '356', '357', '358', '359', '362', '367', '378', '382', '385', '388', '390', '392', '395'];
+var iframe = document.getElementById('viz');
+  iframe.style.visibility='visible';
+  iframe.srcdoc = `    <html>      <head>      <script type='module'>        window.addEventListener('message', (event) => {          const { type, value } = event.data;          if (type === 'html') {            document.body.innerHTML = value;          }        })      <\/script>      <\/head>      <body>      <\/body>    </html>  `;
+
+  var currentIndex = 1;
+  function cycleIframe() {    var file_idx = indices[currentIndex-1];
+    var htmlContent = getText(main_url+file_idx+'.html')
+    const html = { type: 'html', value: htmlContent }
+    iframe.contentWindow.postMessage(html, '*')
+    currentIndex++;
+    if (currentIndex > indices.length) {      currentIndex = 1;    }  }  
+setInterval(cycleIframe, 2000);</script>

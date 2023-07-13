@@ -11,8 +11,8 @@ from utils.events_utils import get_event_blocks_dict, save_event_blocks_dict
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--path_raw', type=str, default='./assets/raw/question')
-    parser.add_argument('--path_std', type=str, default='./assets/std/question')
+    parser.add_argument('--path_raw', type=str, default='./data/raw/question')
+    parser.add_argument('--path_std', type=str, default='./data/std/question')
     parser.add_argument('--path_cache', type=str, default='./cache')
     parser.add_argument('--verbose', action='store_true')
     args = parser.parse_args()

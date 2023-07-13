@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><iframe id='viz' srcdoc=''style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; visibility:hidden;'allowTransparency='true' background='transparent'>Your browser doesn't support iframes.</iframe></body></html><script>  function getText(url){   var request = new XMLHttpRequest();    request.open('GET', url, false);    request.send(null);    if(request.status === 200) {      return request.responseText    }    else {      console.log('Error')    }}
+var main_url = 'https://raw.githubusercontent.com/meghabyte/crosswords/main/replays/game_61_user_3b70c1269d5ab4e2fa7a36e7e09a0296_model_davinci/game_61_user_3b70c1269d5ab4e2fa7a36e7e09a0296_model_davinci__'
+let indices = ['12', '13', '14', '17', '18', '19', '26', '27', '28', '32', '33', '34', '35', '38', '39', '40', '41', '42', '44', '45', '46', '47', '48', '52', '53', '54', '55', '57', '58', '59', '60', '63', '64', '67', '68', '69', '70', '72', '73', '74', '78', '79', '80', '83', '84', '85', '89', '90', '91', '92', '104', '105', '107', '108', '109', '112', '113', '114', '121', '122', '123', '124', '133', '135', '138', '147', '152', '154', '159', '160', '161', '162', '163', '165', '170', '173'];
+var iframe = document.getElementById('viz');
+  iframe.style.visibility='visible';
+  iframe.srcdoc = `    <html>      <head>      <script type='module'>        window.addEventListener('message', (event) => {          const { type, value } = event.data;          if (type === 'html') {            document.body.innerHTML = value;          }        })      <\/script>      <\/head>      <body>      <\/body>    </html>  `;
+
+  var currentIndex = 1;
+  function cycleIframe() {    var file_idx = indices[currentIndex-1];
+    var htmlContent = getText(main_url+file_idx+'.html')
+    const html = { type: 'html', value: htmlContent }
+    iframe.contentWindow.postMessage(html, '*')
+    currentIndex++;
+    if (currentIndex > indices.length) {      currentIndex = 1;    }  }  
+setInterval(cycleIframe, 2000);</script>

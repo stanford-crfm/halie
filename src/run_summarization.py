@@ -11,8 +11,8 @@ from utils.text_utils import normalize_text
 
 if __name__ == '__main__':
     parser = ArgumentParser()
-    parser.add_argument('--path_raw', type=str, default='./assets/raw/summarization')
-    parser.add_argument('--path_std', type=str, default='./assets/std/summarization')
+    parser.add_argument('--path_raw', type=str, default='./data/raw/summarization')
+    parser.add_argument('--path_std', type=str, default='./data/std/summarization')
     parser.add_argument('--path_cache', type=str, default='./cache')
     parser.add_argument('--verbose', action='store_true')
     args = parser.parse_args()
