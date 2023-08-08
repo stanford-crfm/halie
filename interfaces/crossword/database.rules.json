@@ -1,0 +1,85 @@
+{
+  "rules": {
+    ".write": false,
+    ".read": false,
+    "battle": {
+      ".write": true,
+      ".read": true
+    },
+    "game": {
+      ".read": "false",
+      ".indexOn": ["pid"],
+      "$gid": {
+        ".read": true,
+        ".write": "!data.exists()",
+        "archivedEvents": {
+          "unarchivedAt": {
+            ".write": "true"
+          }
+        },
+        "events": {
+          ".write": "!data.exists()",
+          "$eventId": {
+            ".write": "!data.exists()"
+          }
+        },
+        "battleData": {
+          ".read": true,
+          ".write": true
+        }
+      }
+    },
+    "puzzle": {
+      ".read": true,
+      "$pid": {
+        ".write": "!data.exists()"
+      }
+    },
+    "puzzlelist": {
+      ".read": true,
+      "$pid": {
+        ".write": "!data.exists()",
+        "stats": {
+          "numSolves": {
+            ".write": true
+          }
+        }
+      }
+    },
+    "stats": {
+      ".read": true,
+      "$pid": {
+        ".write": "!data.exists()",
+        "solves": {
+          "$gid": {
+            ".write": true
+          }
+        }
+      }
+    },
+    "counters": {
+      ".read": true,
+      ".write": true
+    },
+    "user": {
+      ".read": true,
+      ".write": true
+    },
+    "cursors": {
+      ".read": true,
+      ".write": true
+    },
+    "history": {
+      ".read": true,
+      ".write": true
+    },
+    "composition": {
+      ".read": true,
+      ".write": true
+    },
+    "myCompositions": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

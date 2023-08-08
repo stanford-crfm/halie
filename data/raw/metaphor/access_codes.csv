@@ -1,0 +1,17 @@
+domain,example,prompt,access_code,start_date,end_date,expire_after,session_length,n,max_tokens,temperature,top_p,presence_penalty,frequency_penalty,stop,engine,condition,additional_data
+metaphor,na,first,8f20423d20844df0af363f45e367613f,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/davinci,both,na
+metaphor,na,first,8cf685bead6d4a96ae197bcc1a5420ae,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-davinci-001,both,na
+metaphor,na,first,f7c3430bda9e4436a8f659a11f1af08c,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-babbage-001,both,na
+metaphor,na,first,854c99387ad34d1da9c6ad6848a6e248,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,ai21/j1-jumbo,both,na
+metaphor,na,second,f897004335eb44daac4cf4e8e3d3e81b,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/davinci,both,na
+metaphor,na,second,da4018814b75467b8951657efbb5e2c8,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-davinci-001,both,na
+metaphor,na,second,e2516bb1bbda4eafb46d71730f7e743d,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-babbage-001,both,na
+metaphor,na,second,43bb190f2e2f401d87626b6349df0940,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,ai21/j1-jumbo,both,na
+metaphor,na,third,b3d16033c90c427eb9de7c94578c2fc4,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/davinci,both,na
+metaphor,na,third,fa17a93f370b4faca8f130eb7ee1b0c1,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-davinci-001,both,na
+metaphor,na,third,7a2f02fc86c14f4eb565c271c8bc9c07,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-babbage-001,both,na
+metaphor,na,third,57c9d97ad2704feebaf5845df3fb5743,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,ai21/j1-jumbo,both,na
+metaphor,na,fourth,c349073e110d47009b6ac427e8f91c0b,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/davinci,both,na
+metaphor,na,fourth,9d3d20ee51f5402a890efeca727d0eda,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-davinci-001,both,na
+metaphor,na,fourth,f960208db5254c528acbebad35d44569,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,openai/text-babbage-001,both,na
+metaphor,na,fourth,4a09e0de592c49b5a35176ddd4d905e3,20211012,20250101,-1,600,5,30,0.9,1,0,0,.,ai21/j1-jumbo,both,na

@@ -1,0 +1,6 @@
+code,model,key,max_tokens,temp
+smoked-trout,openai/davinci,7wNfScdl2TderXMw6VH7zGGrgutZO9VR,50,0.5
+sesame-soba,ai21/j1-jumbo,7wNfScdl2TderXMw6VH7zGGrgutZO9VR,50,0.5
+pistachio-croissant,openai/text-davinci-001,7wNfScdl2TderXMw6VH7zGGrgutZO9VR,50,0.5
+hazelnut-latte,openai/text-babbage-001,7wNfScdl2TderXMw6VH7zGGrgutZO9VR,50,0.5
+default,openai/text-davinci-001,7wNfScdl2TderXMw6VH7zGGrgutZO9VR,50,0.5

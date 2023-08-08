@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><iframe id='viz' srcdoc=''style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; visibility:hidden;'allowTransparency='true' background='transparent'>Your browser doesn't support iframes.</iframe></body></html><script>  function getText(url){   var request = new XMLHttpRequest();    request.open('GET', url, false);    request.send(null);    if(request.status === 200) {      return request.responseText    }    else {      console.log('Error')    }}
+var main_url = 'https://raw.githubusercontent.com/meghabyte/crosswords/main/replays/game_61_user_cc105e81c42472616e2fc40b78bd0926_model_text-babbage/game_61_user_cc105e81c42472616e2fc40b78bd0926_model_text-babbage__'
+let indices = ['10', '17', '20', '22', '24', '28', '32', '34', '36', '38', '40', '53', '54', '56', '58', '60', '62', '67', '74', '78', '80', '82', '84', '86', '88', '90', '92', '94', '96', '98', '103', '106', '108', '109', '111', '113', '115', '117', '121', '122', '123', '124', '125', '126', '127', '128', '129', '133', '138', '140', '142', '145', '148', '153', '155', '157', '159', '163', '164', '166', '168', '170', '172', '176', '178', '185', '186', '187', '190', '191', '192', '193', '202', '207', '210', '212', '214', '217', '218', '223', '225', '227', '229', '235', '238', '256', '258'];
+var iframe = document.getElementById('viz');
+  iframe.style.visibility='visible';
+  iframe.srcdoc = `    <html>      <head>      <script type='module'>        window.addEventListener('message', (event) => {          const { type, value } = event.data;          if (type === 'html') {            document.body.innerHTML = value;          }        })      <\/script>      <\/head>      <body>      <\/body>    </html>  `;
+
+  var currentIndex = 1;
+  function cycleIframe() {    var file_idx = indices[currentIndex-1];
+    var htmlContent = getText(main_url+file_idx+'.html')
+    const html = { type: 'html', value: htmlContent }
+    iframe.contentWindow.postMessage(html, '*')
+    currentIndex++;
+    if (currentIndex > indices.length) {      currentIndex = 1;    }  }  
+setInterval(cycleIframe, 2000);</script>

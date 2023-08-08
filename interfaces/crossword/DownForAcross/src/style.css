@@ -1,0 +1,64 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+html,
+body,
+input,
+#root,
+.router-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 0;
+  font-family: 'avenir next', avenir, 'Nunito', 'helvetica neue', 'Helvetica', 'arial', sans-serif;
+}
+
+button {
+  margin: 0;
+  font-family: 'avenir next', avenir, 'Nunito', 'helvetica neue', 'Helvetica', 'arial', sans-serif;
+}
+
+@media only screen and (max-device-width: 480px) {
+  body,
+  html {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+:root {
+  --main-black: #151515;
+  --main-gray-1: #666;
+  --main-gray-2: #ccc;
+  --main-gray-3: #f0f0f0;
+  --main-blue: #6aa9f4;
+  --main-blue-2: rgba(110, 198, 255, 1);
+  --main-blue-3: #dcefff;
+  --main-green-1: rgba(31, 255, 61, 0.3);
+  --main-green-2: rgba(31, 255, 61, 1);
+  --pencil-color: #888888; /* must be 3 or 6 digit hex */
+}
+
+.swal-modal {
+  will-change: unset !important;
+}
+
+.swal-text--no-margin {
+  margin: 0 !important;
+}
+
+.swal-text--text-align-center {
+  text-align: center !important;
+}
+
+#unlistedRow {
+  margin-top: 10px;
+}
+
+#unlistedRow input {
+  display: inline-block;
+}

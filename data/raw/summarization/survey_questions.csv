@@ -1,0 +1,8 @@
+code,question
+consistency,The summary contains only statements that logically follow the document.
+coherency,The summary organizes the relevant information into a well-structured summary.
+relevance,The summary includes only important information from the source document.
+adjectives,What adjectives would you use to describe the AI assistant (i.e. the summarization system)?
+helpfulness,How helpful was having access to the AI assistant as an automated summarization tool? (1: not helpful at all / 5: extremely helpful)
+edit,How much did you have to edit the generated summaries? (1: nothing at all / 5: almost every word)
+improvement,The AI assistant improved as I edited more summaries. (1: strongly disagree / 5: strongly agree)

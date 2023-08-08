@@ -1,0 +1,23 @@
+code,question
+timestamp,Timestamp
+worker_id,Worker ID
+session_id,Please enter the verification code from this writing session
+,
+fluency,How fluent were the suggestions from the system?
+helpfulness,"During this writing session, the system helped me come up with new ideas"
+helpfulness_reverse,"During this writing session, I felt like that I would have come up with better metaphorical sentences if I had worked *alone*"
+ease,It was easy to write metaphorical sentences with the system
+enjoyment,I enjoyed this writing session
+,
+helpfulness_reason,What kinds of suggestions did you find *helpful* and why? (Give a concrete example if possible.)
+helpfulness_reverse_reason,What kinds of suggestions did you find *not helpful* and why? (Give a concrete example if possible.)
+,
+edit_reason,"What were the reasons you made edits, if any, to suggestions from the system?"
+change_interaction,"Did the way you interacted with the system change over the course of the writing session? If so, how?"
+,
+satisfaction,I am satisfied with the metaphorical sentences I came up with
+ownership,I feel like the metaphorical sentences are mine
+reuse,I would be willing to use this system again
+,
+ai_description,What adjectives would you use to describe the system?
+feedback,Any feedback or comments? (optional)

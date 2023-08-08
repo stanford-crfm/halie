@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><iframe id='viz' srcdoc=''style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; visibility:hidden;'allowTransparency='true' background='transparent'>Your browser doesn't support iframes.</iframe></body></html><script>  function getText(url){   var request = new XMLHttpRequest();    request.open('GET', url, false);    request.send(null);    if(request.status === 200) {      return request.responseText    }    else {      console.log('Error')    }}
+var main_url = 'https://raw.githubusercontent.com/meghabyte/crosswords/main/replays/game_187_user_02fe4addc3d80015a47dc2539391ba93_model_davinci/game_187_user_02fe4addc3d80015a47dc2539391ba93_model_davinci__'
+let indices = ['1', '5', '6', '7', '8', '9', '11', '15', '21', '22', '23', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '39', '40', '41', '43', '45', '47', '49', '51', '55', '56', '57', '58', '59', '60', '61', '66', '67', '69', '71', '74', '77', '79', '81', '83', '85', '89', '91', '94', '95', '96', '97', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '117', '121', '122', '123', '124', '125', '127', '128', '131', '136', '150', '156', '168', '169', '170', '171', '173', '175', '176', '177', '180', '182', '184', '187', '188', '193', '204'];
+var iframe = document.getElementById('viz');
+  iframe.style.visibility='visible';
+  iframe.srcdoc = `    <html>      <head>      <script type='module'>        window.addEventListener('message', (event) => {          const { type, value } = event.data;          if (type === 'html') {            document.body.innerHTML = value;          }        })      <\/script>      <\/head>      <body>      <\/body>    </html>  `;
+
+  var currentIndex = 1;
+  function cycleIframe() {    var file_idx = indices[currentIndex-1];
+    var htmlContent = getText(main_url+file_idx+'.html')
+    const html = { type: 'html', value: htmlContent }
+    iframe.contentWindow.postMessage(html, '*')
+    currentIndex++;
+    if (currentIndex > indices.length) {      currentIndex = 1;    }  }  
+setInterval(cycleIframe, 2000);</script>

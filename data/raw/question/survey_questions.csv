@@ -1,0 +1,14 @@
+code,question
+timestamp,Timestamp
+worker_id,Please enter your worker ID
+session_id,Please enter the verification code you received from the interface
+,
+fluency,How clear (or fluent) were the responses from the AI Assistant?
+helpfulness,"Independent of its fluency, how helpful was having access to the AI Assistant compared to not having access?"
+helpfulness_freetext,Why did you find the AI Assistant helpful  or unhelpful?
+ease,How easy was it to interact with the AI Assistant?
+,
+change_freetext,"Did the way you chose to interact with the AI Assistant change over the course of answering questions? If so, how?"
+,
+adjectives,What adjectives would you use to describe the AI Assistant?
+feedback,Any feedback or comments?

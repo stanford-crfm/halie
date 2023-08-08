@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><body><iframe id='viz' srcdoc=''style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999; visibility:hidden;'allowTransparency='true' background='transparent'>Your browser doesn't support iframes.</iframe></body></html><script>  function getText(url){   var request = new XMLHttpRequest();    request.open('GET', url, false);    request.send(null);    if(request.status === 200) {      return request.responseText    }    else {      console.log('Error')    }}
+var main_url = 'https://raw.githubusercontent.com/meghabyte/crosswords/main/replays/game_187_user_27d5ac2483f94bf51117c69a863e51c4_model_davinci/game_187_user_27d5ac2483f94bf51117c69a863e51c4_model_davinci__'
+let indices = ['1', '5', '6', '7', '8', '9', '10', '11', '12', '14', '16', '17', '18', '19', '21', '26', '27', '28', '29', '30', '31', '32', '34', '38', '39', '40', '41', '42', '43', '44', '45', '46', '51', '52', '54', '56', '59', '63', '65', '67', '69', '74', '75', '81', '82', '83', '84', '86', '88', '91', '94', '97', '98', '99', '100', '104', '105', '106', '107', '108', '111', '112', '115', '116', '117', '119', '122', '125', '127', '129', '131', '134', '136', '139', '140', '141', '142', '143', '147', '153', '154', '155', '157', '160', '163', '164', '165', '170', '173', '175', '179', '184', '187', '188', '189', '192', '201', '202', '203', '204', '205', '206', '212', '214', '219', '220', '221', '222', '227', '228', '229', '230', '232', '236', '242', '245', '252', '253', '254', '255', '256', '257', '261', '262', '263', '264', '265', '266', '270', '275', '278', '284', '286', '288', '290', '292', '294', '296', '297', '298', '299', '300', '304', '305', '306', '307', '310', '312', '316', '323', '325', '326', '334', '337', '339', '341', '345', '347', '350', '352', '354', '357', '358', '361', '364', '365', '369'];
+var iframe = document.getElementById('viz');
+  iframe.style.visibility='visible';
+  iframe.srcdoc = `    <html>      <head>      <script type='module'>        window.addEventListener('message', (event) => {          const { type, value } = event.data;          if (type === 'html') {            document.body.innerHTML = value;          }        })      <\/script>      <\/head>      <body>      <\/body>    </html>  `;
+
+  var currentIndex = 1;
+  function cycleIframe() {    var file_idx = indices[currentIndex-1];
+    var htmlContent = getText(main_url+file_idx+'.html')
+    const html = { type: 'html', value: htmlContent }
+    iframe.contentWindow.postMessage(html, '*')
+    currentIndex++;
+    if (currentIndex > indices.length) {      currentIndex = 1;    }  }  
+setInterval(cycleIframe, 2000);</script>

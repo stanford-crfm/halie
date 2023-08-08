@@ -1,0 +1,15 @@
+code,question
+worker_id,Please enter your worker ID
+session_id,Please enter the verification code you received from the puzzle interface
+,
+use_ai,Did you chat with the AI Teammate at all while solving the puzzle?
+,
+fluency,How clear (or fluent) were the responses from the AI Teammate?
+helpfulness,"Independent of its fluency, how helpful was your AI Teammate for solving the crossword puzzle?"
+helpfulness_freetext,"Why did you find the AI Teammate helpful or unhelpful?"
+ease,How easy was it to interact with the AI Teammate?
+enjoyment,How enjoyable was it to interact with the AI Teammate?
+,
+ai_description,What adjectives would you use to describe the AI Teammate?
+change_freetext,"Did the way you chose to interact with the AI Teammate change over the course of solving the crossword puzzle? If so, how?"
+feedback,Any feedback or comments?

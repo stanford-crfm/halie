@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "paths": {
+      "@shared/*": ["../src/shared/*"],
+      "@lib/*": ["../src/lib/*"]
+    }
+  },
+  "include": [".", "../src/lib", "../src/shared"]
+}

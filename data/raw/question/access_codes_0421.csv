@@ -1,0 +1,5 @@
+domain,example,prompt,access_code,start_date,end_date,expire_after,session_length,n,max_tokens,temperature,top_p,presence_penalty,frequency_penalty,stop,engine,condition,additional_data
+interactiveqa,na,na,ac187121cb2d4e6c8e02cd1d8ee862ac,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-davinci-001,human,random
+interactiveqa,na,na,5024cf2ae0a2426485fcad32b7e1e9f5,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,ai21/j1-jumbo,human,random
+interactiveqa,na,na,e86c8e00dbeb4954892e149066efc6be,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-babbage-001,human,random
+interactiveqa,na,na,1bd4052cb10c4f46a7bbf881eecabaa9,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/davinci,human,random

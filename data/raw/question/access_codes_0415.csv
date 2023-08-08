@@ -1,0 +1,17 @@
+domain,example,prompt,access_code,start_date,end_date,expire_after,session_length,n,max_tokens,temperature,top_p,presence_penalty,frequency_penalty,stop,engine,condition,additional_data
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3214,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-davinci-001,human,0
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3213,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,ai21/j1-jumbo,human,0
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3212,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-babbage-001,human,0
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3211,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/davinci,human,0
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3215,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-davinci-001,human,1
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3216,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,ai21/j1-jumbo,human,1
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3217,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-babbage-001,human,1
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3218,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/davinci,human,1
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3219,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-davinci-001,human,2
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3220,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,ai21/j1-jumbo,human,2
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3221,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-babbage-001,human,2
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3222,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/davinci,human,2
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3223,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-davinci-001,human,3
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3224,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,ai21/j1-jumbo,human,3
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3225,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/text-babbage-001,human,3
+interactiveqa,na,na,interactiveqa-bd57981c9e6145983c03011af5a3226,20211012,20250101,-1,0,1,100,0.5,1,0,0,DO_NOT_STOP,openai/davinci,human,3
