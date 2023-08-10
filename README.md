@@ -62,5 +62,7 @@ We provide Jupyter Notebook files for analyzing the data collected for HALIE. Th
 
 ## Interfaces
 
-Code for interfaces used to collected interaction traces for tasks in HALIE is located in `./interfaces`. 
+Code for the interface used to collect interaction traces for crossword puzzles in HALIE is located in `./interfaces`. 
+
+The interfaces for question answering, text summarization, and metaphor generation are built based on CoAuthor, whose code is available [here](https://github.com/minalee-research/coauthor-interface). The interface for dialogue is based on Chirpy Cardinal, whose code is available [here](https://stanfordnlp.github.io/chirpycardinal/).
 
