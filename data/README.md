@@ -7,7 +7,15 @@ Our documentation is still under construction. Please reach out to [Mina Lee](ht
 Raw data contains the raw interaction traces collected for each task, including all logged interaction traces (`logs.zip`) as well as survey questions and responses.  
 
 ## Visualizations
-To facilitate easier viewing of the raw interaction data, we provide both `static` and dynamic `replay` visualizations, which are directly viewable in any browser after downlading this repository. Both static and replay visualzations are available  complete for the **Crossword puzzles** task, with further information contained in the [README](https://github.com/stanford-crfm/halie/blob/restructure/data/visualizations/crossword/README.md), and static visualizations are available for the **Question answering** task
+To facilitate easier viewing of the raw interaction data, we provide both `static` and dynamic `replay` visualizations, which are directly viewable in any browser after downlading this repository. Both static and replay visualzations are available  for the **Crossword puzzles** task, and static visualizations are available for the **Question answering** task. 
+
+To make it easier to browse through these interactive visualizations, we have created the following web applications:
+
+- [Crossword Puzzle Visualizations](https://meghabyte.github.io/visualizations-halie/visualizations/crossword/)
+- [Question Answering Visualizations](https://meghabyte.github.io/visualizations-halie/visualizations/questions/)
+
+
+For any questions about the data visualizations for the **Question answering** or **Crossword puzzle** tasks, feel free to reach out to [Megha Srivastava](https://web.stanford.edu/~meghas/) at `megha@cs.stanford.edu`!
 
 ## Standardized data
 
