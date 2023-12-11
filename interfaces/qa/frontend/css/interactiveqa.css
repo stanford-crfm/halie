@@ -1,0 +1,125 @@
+#header {
+  background-color: #F6AE2D !important;
+}
+
+#frontend {
+  position: relative;
+  width: 90% !important;
+}
+
+#frontend-left {
+  position: relative;
+  float: left;
+  width: 30%;
+}
+
+#frontend-right {
+  float: right;
+  width: 65%;
+  height: calc(100vh - 100px - 60px - 100px); /* Same as frontend */
+  z-index: 500;
+}
+
+#frontend-right-overlay {
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 50px 25px;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  color: #888;
+}
+
+#editor-view {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: none;
+  height: 200px !important;  /* Sync with frontend height */
+}
+
+#completion {
+  min-height: 136px;
+  margin: 0 auto 25px auto;
+  padding: 25px;
+  overflow-y: scroll;
+  background-color: #eee;
+}
+
+#completion-text{
+  overflow-wrap: break-word;
+}
+
+#timer{
+  height: inherit !important;
+  line-height: inherit !important;
+  padding-right: 10px;
+}
+
+#loading-signal {
+  text-align: center;
+}
+
+#footer {
+  background-color: #BD2031;
+  color: white;
+  font-size: 18px;
+}
+
+.box-shadow {
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px;
+}
+
+.ql-toolbar {
+  display: none !important;
+}
+
+.header {
+  color: #F6AE2D;
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+.status {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  color: #F6AE2D;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.question {
+  font-weight: bold;
+}
+
+.answer.selected {
+  background-color: #F6AE2D;
+}
+
+.btn-group-vertical {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.floating-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 25px;
+}
+
+.answer {
+  text-align: left !important;
+}

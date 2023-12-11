@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Interactive Question Answering</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex"> <!-- Prevent this page from being indexed -->
+
+    <link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/writing-hand_270d-fe0f.png">
+
+    <!-- Redirect to http -->
+    <script>
+      if (location.protocol == "https:") {
+        location.protocol = "http:";
+      }
+    </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Quill Editor -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+    <!-- Custom -->
+    <link rel="stylesheet" href="./css/animation.css"/>
+    <link rel="stylesheet" href="./css/dropdown.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <link rel="stylesheet" href="./css/interactiveqa.css"/>
+
+    <!-- Data -->
+    <script>const domain = 'interactiveqa';</script>
+    <script src="./js/config.js" defer></script>
+    <script src="./js/helper.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    <script src="./js/logging.js" defer></script>
+    <script src="./js/animation.js" defer></script>
+    <script src="./js/editor.js" defer></script>
+    <script src="./js/dropdown.js" defer></script>
+    <script src="./js/async.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/interactiveqa.js" defer></script>
+
+  </head>
+
+  <body>
+    <div id="header">
+      <h1 class="text-light">Interactive Question Answering
+        <i id='robot' class="fas fa-question"></i>
+        <i id='setting-btn' class="fa fa-cog" aria-hidden="true"></i>
+      </h1>
+    </div>
+
+    <div id="shortcuts" class="do-not-display">
+      <div style="margin-bottom: 5px;">
+        <b>Keyboard shortcuts</b>
+        <span id="shortcuts-close-btn" class="close"><i class="fas fa-times"></i></span><br/>
+      </div>
+      <div>
+        <span class="key" style="margin-right: 5px;">Tab</span> Get suggestions</br>
+        <span class="key">Shift</span> + <span class="key" style="margin-right: 5px;">Tab</span> Reopen suggestions<br/>
+        <span class="key">↑</span><span class="key" style="margin-right: 5px;">↓</span> Navigate suggestion<br/>
+        <span class="key" style="margin-right: 5px;">Enter</span> Select suggestion
+      </div>
+    </div>
+
+    <div id="control">
+      <form class="form-inline">
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-model">model</label>
+          <select id="ctrl-model" class="form-select">
+            <option value="na" selected>N/A</option>
+            <option value="openai/ada">ada</option>
+            <option value="openai/babbage">babbage</option>
+            <option value="openai/curie">curie</option>
+            <option value="openai/davinci">davinci</option>
+            <option value="openai/text-ada-001">text-ada-001</option>
+            <option value="openai/text-babbage-001">text-babbage-001</option>
+            <option value="openai/text-curie-001">text-curie-001</option>
+            <option value="openai/text-davinci-001">text-davinci-001</option>
+            <option value="ai21/j1-large">j1-large</option>
+            <option value="ai21/j1-jumbo">j1-jumbo</option>
+          </select>
+        </div>
+
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-n">n</label>
+          <input type="text" id="ctrl-n" class="form-control">
+        </div>
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-max_tokens">max_tokens</label>
+          <input type="text" id="ctrl-max_tokens" class="form-control">
+        </div>
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-temperature">temperature</label>
+          <input type="text" id="ctrl-temperature" class="form-control">
+        </div>
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-top_p">top_p</label>
+          <input type="text" id="ctrl-top_p" class="form-control">
+        </div>
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-presence_penalty">presence_penalty</label>
+          <input type="text" id="ctrl-presence_penalty" class="form-control">
+        </div>
+        <div class="form-group mx-sm-2">
+          <label for="ctrl-frequency_penalty">frequency_penalty</label>
+          <input type="text" id="ctrl-frequency_penalty" class="form-control">
+        </div>
+      </form>
+    </div>
+
+    <div id="frontend">
+      <div id="frontend-left" class="box-shadow">
+        <div class="header">Question</div>
+        <div class="status"><span id="currentQuestionIndex">0</span>/<span id="totalNumQuestion">0</span></div>
+        <div class="question"><span id="question"></span></div>
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-light answer" data-choice='a'>A. <span id="answer-a"></span></button>
+          <button type="button" class="btn btn-light answer" data-choice='b'>B. <span id="answer-b"></span></button>
+          <button type="button" class="btn btn-light answer" data-choice='c'>C. <span id="answer-c"></span></button>
+          <button type="button" class="btn btn-light answer" data-choice='d'>D. <span id="answer-d"></span></button>
+        </div>
+
+        <div class="floating-button">
+          <!-- <span id="timer"><span class="countdown">00:00</span></span> -->
+          <button id="next-button" type="button" class="btn btn-warning">Next</button>
+          <button id="finish-button" type="button" class="btn btn-primary do-not-display">Finish</button>
+        </div>
+      </div>
+
+      <div id="frontend-right" class="box-shadow">
+        <div class="header">Type your query</div>
+
+        <div id="editor-view">
+          <div id="editor-container">
+            The system is getting ready for you to use!
+          </div>
+          <div class="floating-button">
+            <button id="generate-button" type="button" class="btn btn-secondary">Generate</button>
+          </div>
+        </div>
+
+        <div class="header">System output</div>
+        <div id="completion">
+          <div id="loading-signal" class="do-not-display">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+          </div>
+          <div id="completion-text"></div>
+        </div>
+      </div>
+
+      <div id="frontend-right-overlay" class="do-not-display">
+        AI assistant is disabled for this question.
+      </div>
+
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+      <b>Warning</b>: Please do not refresh the page! It will reset your progress and you will have to restart from the beginning.
+    </footer><!-- Footer -->
+
+    <!-- Bootstrap -->
+    <script src="./lib/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ec39425d5e.js" crossorigin="anonymous"></script>
+
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  </body>
+</html>
